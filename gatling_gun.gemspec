@@ -24,6 +24,8 @@ SPEC = Gem::Specification.new do |s|
   s.required_ruby_version     = ">= 1.8.7"
   s.required_rubygems_version = ">= 1.3.7"
 
+  s.add_dependency 'json'
+
   s.files         = `git ls-files`.split("\n")
   # s.test_files    = `git ls-files -- test/*.rb`.split("\n")
   s.require_paths = %w[lib]
