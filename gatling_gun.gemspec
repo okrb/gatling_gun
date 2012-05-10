@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 require File.expand_path('../lib/gatling_gun/version', __FILE__)
 
-SPEC = Gem::Specification.new do |gem|
+Gem::Specification.new do |gem|
   gem.name        = "gatling_gun"
   gem.version     = GatlingGun::VERSION
   gem.platform    = Gem::Platform::RUBY
