@@ -1,4 +1,4 @@
-class GatlingGun
+module GatlingGun
   class ApiCall
     BASE_URL = "https://sendgrid.com/api/newsletter"
     CA_PATH  = File.join(File.dirname(__FILE__), *%w[.. .. data ca-bundle.crt])

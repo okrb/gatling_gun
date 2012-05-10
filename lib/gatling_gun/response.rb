@@ -1,4 +1,4 @@
-class GatlingGun
+module GatlingGun
   class Response
     include Enumerable
 
