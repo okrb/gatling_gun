@@ -1,13 +1,14 @@
-require "json"
-require "net/https"
-require "openssl"
-require "time"
-require "uri"
+require 'json'
+require 'net/https'
+require 'openssl'
+require 'time'
+require 'uri'
 require 'ostruct'
 
-require "gatling_gun/api_call"
-require "gatling_gun/response"
-require "gatling_gun/client"
+require 'gatling_gun/core_ext'
+require 'gatling_gun/api_call'
+require 'gatling_gun/response'
+require 'gatling_gun/client'
 
 module GatlingGun
   def self.configure
