@@ -33,4 +33,8 @@ class BangMethodTest < Test::Unit::TestCase
     assert Receiver.new.some_api_call!(true).is_a?(FakeResponse)
   end
 
+  def test_actual_use
+    assert GatlingGun.instance_methods.include?(:add_list!)
+  end
+
 end
