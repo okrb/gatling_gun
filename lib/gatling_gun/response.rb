@@ -23,6 +23,13 @@ class GatlingGun
     def error?
       not success?
     end
+
+    def verify!
+      # in some cases, a success is returned but with an error message
+      # consider that a failure anyway for bang calls
+      failure = error? || self['error']
+      fail "API call failed - #{self['error']}" if failure
+    end
     
     def error_messages
       Array(self[:errors]) + Array(self[:error])
