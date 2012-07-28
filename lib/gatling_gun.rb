@@ -5,11 +5,12 @@ require "time"
 require "uri"
 
 require "gatling_gun/api_call"
+require "gatling_gun/bang_method"
 require "gatling_gun/response"
 
-class GatlingGun
+class GatlingGun  
   VERSION = "0.0.3"
-  
+
   def initialize(api_user, api_key)
     @api_user = api_user
     @api_key  = api_key
@@ -183,7 +184,14 @@ class GatlingGun
   def delete_schedule(newsletter)
     make_api_call("schedule/delete", name: newsletter)
   end
-  
+
+  ####################
+  ### Bang methods ###
+  ####################
+  extend GatlingGun::BangMethod
+
+  bang_method *instance_methods(false)
+
   #######
   private
   #######

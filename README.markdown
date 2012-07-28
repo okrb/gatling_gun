@@ -69,3 +69,9 @@ Finally, you can schedule when to have the message sent:
 
 That would sent it 10 minutes from now, but you can adjust the time to whenever
 you desire or even leave it out to send now.
+
+### Bang method calls
+
+By default GatlingGun won't raise an error if SendGrid returns an error.
+
+If you want to raise instead, you can use the bang equivalents (`add_list!`, `add_newsletter!` etc).
