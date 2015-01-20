@@ -107,6 +107,11 @@ class GatlingGun
   end
   alias_method :delete_emails, :delete_email
 
+  def count_email(list)
+    make_api_call('lists/email/count', list: list)
+  end
+  alias_method :count_emails, :count_email
+
   ################
   ### Identity ###
   ################
