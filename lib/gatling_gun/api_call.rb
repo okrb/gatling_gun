@@ -1,6 +1,6 @@
 class GatlingGun
   class ApiCall
-    BASE_URL = "https://sendgrid.com/api/newsletter"
+    BASE_URL = "https://api.sendgrid.com/api/newsletter"
 
     def initialize(action, parameters)
       @action     = action
